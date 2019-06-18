@@ -1,0 +1,5 @@
+pytelegrambotapi
+flask
+pymorphy2
+numpy
+pysocks
