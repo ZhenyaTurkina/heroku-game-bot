@@ -11,6 +11,8 @@ import telebot
 import os
 import re
 
+from conf import TOKEN, WEBHOOK_HOST,  WEBHOOK_PORT
+
 morph = pymorphy2.MorphAnalyzer()
 
 with open('games_precalc.pkl', 'rb') as f:
@@ -101,18 +103,6 @@ def  get_sample(sentenses, count ):
 
 from collections import defaultdict
 START, FIRST_PLAY, PLAY, END = range(4)
-
-
-# In[65]:
-
-
-TOKEN = "795366462:AAEgV7kG6k0B1hPG-0CWJISTL12itERt16Q"
-WEBHOOK_HOST = 'testbotbottest.herokuapp.com'
-WEBHOOK_PORT = '443'
-
-
-# In[66]:
-
 
 WEBHOOK_URL_BASE = "https://{}:{}".format(WEBHOOK_HOST, WEBHOOK_PORT)
 WEBHOOK_URL_PATH = "/{}/".format(TOKEN)
